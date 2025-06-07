@@ -42,4 +42,15 @@ tail -f /home/dakshgautam/logs/rclone-sync.log
 ln -s /home/dakshgautam/Documents/dg_notes/dg_obsidian content
 ```
 
+- running the server 
+
+```
+npx quartz build --serve
+```
+
+
+- Running the processes 
+
+ps aux | grep "npx quartz build --serve"
+ps aux | grep "./notes_sync.sh"
 
