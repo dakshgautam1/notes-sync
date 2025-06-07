@@ -1,30 +1,45 @@
-1. Give permissions to sh file
+- Install rclone 
+
+```
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
+
+```
+
+- Go to google drive app services
+- Create `Create OAuth client ID`. 
+ 
+- Give permissions to sh file
 
 ```
 chmod +x notes_sync.sh
 ```
 
-2. Run sync script (one time)
+- Run sync script (one time)
 
 ```
 ./notes_sync.sh 
 ```
 
-3. Run script in background
+- Run script in background
 
 ```bash
 nohup ./notes_sync.sh &
 
 ```
-4. To see the logs use this
+- To see the logs use this
 
 ```
 cd /home/dakshgautam/logs
-tail -f ~/rclone-sync.log
+tail -f /home/dakshgautam/logs/rclone-sync.log
 
 ```
 
-5. Setting up quartz site
+- Setting up quartz site
 
+- removing the `content` folder
+- sym linking the folder 
+```
+ln -s /home/dakshgautam/Documents/dg_notes/dg_obsidian content
+```
 
 
